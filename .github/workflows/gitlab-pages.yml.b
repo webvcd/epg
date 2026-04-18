@@ -48,7 +48,7 @@ jobs:
         run: |
           rm ./git -rf
           ls -la
-          git clone https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@gitlab.com/suzukua/epg.git
+          git clone https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@gitlab.com/webvcd/epg.git
           ls -la
           cp -r ./_site/* ./epg/
           cd epg
@@ -58,5 +58,5 @@ jobs:
           git status
           git add .
           git commit -am "Automated build"
-          git push https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@gitlab.com/suzukua/epg.git HEAD:main
+          git push https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@gitlab.com/webvcd/epg.git HEAD:main
         
